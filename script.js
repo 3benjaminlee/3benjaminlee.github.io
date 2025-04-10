@@ -1,19 +1,6 @@
 document.addEventListener('DOMContentLoaded', () => {
     // Theme toggle functionality removed since header is gone
     
-    // Set initial theme based on system preference
-    const prefersDarkScheme = window.matchMedia('(prefers-color-scheme: dark)');
-    if (prefersDarkScheme.matches) {
-        document.body.setAttribute('data-theme', 'dark');
-    } else {
-        document.body.setAttribute('data-theme', 'light');
-    }
-
-    // Check for saved theme preference
-    const savedTheme = localStorage.getItem('theme');
-    if (savedTheme) {
-        document.body.setAttribute('data-theme', savedTheme);
-    }
 
     // Smooth scroll for navigation links - only if they exist
     const anchorLinks = document.querySelectorAll('a[href^="#"]');
